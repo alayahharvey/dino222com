@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO 기본 메타 태그 -->
+    <title>피싱 사이트 식별을 위한 도메인 철자 및 URL 검증 체크리스트 | 웹 보안 가이드</title>
+    <meta name="description" content="지능화되는 피싱 사이트와 유사 도메인 사칭 공격을 차단하기 위한 도메인 철자 분석, 타이포스쿼팅 판별법, URL 구조 검증 5단계 체크리스트를 확인하세요.">
+    <meta name="keywords" content="도메인검증, 피싱사이트식별, 타이포스쿼팅, URL검증, 웹보안, dino도메인, 보안체크리스트">
+    <meta name="author" content="웹 보안 연구소">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://xn--o80bz0ah56b.com/">
+
+    <!-- Open Graph (Facebook, KakaoTalk, LinkedIn) -->
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="피싱 사이트 식별을 위한 도메인 철자 및 URL 검증 체크리스트">
+    <meta property="og:description" content="사칭 사이트와 악성 도메인을 가려내는 실무적인 URL 구조 분석 및 보안 검증 체크리스트.">
+    <meta property="og:url" content="https://xn--o80bz0ah56b.com/">
+    <meta property="og:site_name" content="디지털 플랫폼 보안 포털">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="피싱 사이트 식별을 위한 도메인 철자 및 URL 검증 체크리스트">
+    <meta name="twitter:description" content="타이포스쿼팅, 서브도메인 조작, 동형이의어 공격을 판별하는 실전 도메인 보안 가이드.">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-page: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --line-height: 1.85;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: var(--line-height);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.15rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.35;
+            letter-spacing: -0.02em;
+            word-break: keep-all;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 16px;
+            margin-top: 14px;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        p {
+            font-size: 1.065rem;
+            color: var(--text-muted);
+            text-align: justify;
+            word-break: keep-all;
+            letter-spacing: -0.01em;
+        }
+
+        p strong {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+            .container {
+                padding: 24px;
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: 1.65rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <span class="badge">정보 보안 및 사이버 위협 대응</span>
+            <h1>피싱 사이트 식별을 위한 도메인 철자 및 URL 검증 체크리스트</h1>
+            <div class="meta-info">
+                <span>분류: 사이버 보안 가이드</span>
+                <span>•</span>
+                <span>열람 대상: 웹 플랫폼 이용자 및 보안 관리자</span>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <p>디지털 전환이 가속화되고 온라인 플랫폼을 매개로 한 상호작용이 일상화되면서, 사용자의 계정 자격 증명과 금융 자산을 탈취하려는 피싱(Phishing) 공격은 날이 갈수록 정교해지고 있습니다. 특히 정상 서비스와 육안으로 구분하기 힘들 정도로 웹페이지 디자인을 완벽히 복제한 뒤, 유사한 웹 주소로 이용자를 유인하는 사칭 사이트 기법은 가장 빈번하면서도 치명적인 위협입니다. 이용자가 비공식 링크나 사칭 도메인의 함정을 피하고 안전하게 서비스를 이용하기 위해서는, 검증된 공식 안내 허브를 통해 최신의 정규 <strong>dino도메인</strong> 접속 경로를 명확히 확인하는 습관을 들이는 것은 물론 브라우저 주소창에 표시되는 URL 구조를 스스로 해독하고 검증할 수 있는 선제적 보안 인식이 필수적입니다.</p>
+
+                <p>피싱 공격자들이 가장 애용하는 수법 중 하나는 '타이포스쿼팅(Typosquatting, 오타 도메인 등록)'과 '콤보스쿼팅(Combosquatting)'입니다. 타이포스쿼팅은 사용자가 주소를 직접 입력할 때 흔히 저지르는 오타를 악용하는 방식으로, 키보드 자판에서 인접한 영문자를 바꾸거나 철자 하나를 누락하는 수법을 사용합니다. 예를 들어 정상적인 도메인의 알파벳 'o' 대신 숫자 '0'을 넣거나, 'l' 대신 대문자 'I' 또는 숫자 '1'을 배치하는 방식입니다. 콤보스쿼팅은 정상 브랜드 명칭의 앞뒤에 'login', 'secure', 'support', 'verify'와 같은 신뢰성 높은 수식어를 하이픈(-)과 함께 교묘히 덧붙여 마치 공식 보안 페이지인 것처럼 착각을 유발합니다. 이러한 주소들은 스치듯 바라보면 정상 링크로 오인하기 쉬우므로 한 자 한 자 철자를 대조하는 주의력이 요구됩니다.</p>
+
+                <p>또 다른 고도화된 사기 수법은 유니코드 다국어 도메인의 시각적 유사성을 악용한 '동형이의어 공격(IDN Homograph Attack)'입니다. 라틴 문자 알파벳과 형태가 완전히 일치해 보이는 키릴 자모나 그리스 문자를 도메인 주소에 은밀히 섞어 등록하는 방식입니다. 예를 들어 키릴 문자의 'а(U+0430)'와 'о(U+043E)'는 육안상 일반 영문 소문자 'a', 'o'와 구별이 불가능합니다. 최신 웹 브라우저는 이러한 위험을 방지하기 위해 다국어 도메인을 퓨니코드(Punycode, 예: `xn--...`) 형식으로 변환하여 표시하므로, 주소창에 생소한 퓨니코드 문자열이 노출된다면 악의적인 모방 도메인일 가능성을 강력히 의심하고 접속을 즉시 중단해야 합니다.</p>
+
+                <p>URL의 계층적 구조를 정확히 읽어내는 것 또한 피싱을 판별하는 결정적인 기술적 역량입니다. 도메인 네임 시스템(DNS) 체계는 오른쪽의 최상위 도메인(TLD)부터 시작하여 왼쪽으로 위계가 확장되는 역방향 구조를 지닙니다. 공격자들은 이러한 원리를 모르는 이용자들을 속이기 위해 서브도메인 영역에 유명 브랜드 이름을 삽입하는 기법을 구사합니다. 예를 들어 주소의 형태가 유명 브랜드명으로 시작하더라도, 슬래시(/) 직전의 핵심 도메인(SLD)과 최상위 도메인이 전혀 생소한 출처라면 그것은 브랜드와 무관한 공격자의 서버로 연결되는 피싱 사이트입니다. URL의 맨 우측 끝 호스트 네임이 누구의 소유인지를 명확히 식별해야 가짜 주소의 덫에 걸리지 않습니다.</p>
+
+                <p>흔히 범하는 중대한 오해 중 하나는 브라우저 주소창 좌측의 '자물쇠 아이콘(HTTPS)'이 사이트의 진정성과 안전성을 보증해 준다는 맹신입니다. 무료 SSL/TLS 인증서 발급 기관의 보편화로 인해 오늘날 공격자들 역시 몇 분 만에 악성 도메인에 대한 보안 인증서를 손쉽게 발급받아 자물쇠 표시를 띄울 수 있습니다. HTTPS는 단지 사용자의 브라우저와 해당 웹 서버 간의 통신 구간이 암호화되어 전송 데이터의 도청을 막아줄 뿐, 접속한 대상 사이트 자체가 합법적이고 신뢰할 수 있는 기관인지는 결코 증명하지 못합니다. 따라서 보안 자물쇠 표시에 안주하지 않고 인증서의 세부 발급 대상과 실제 운영 주체를 확인하는 다각적인 검토가 병행되어야 합니다.</p>
+
+                <p>결론적으로 피싱 사이트의 위협으로부터 소중한 개인정보와 디지털 자산을 지키기 위한 핵심 체크리스트는 명확합니다. 첫째, 비공식 커뮤니티나 이메일, 메신저로 전송된 미확인 링크를 통한 접속을 지양하고 검증된 공식 경로를 사전에 북마크하여 이용합니다. 둘째, 주소창의 영문 철자와 숫자 혼용 여부를 육안으로 꼼꼼히 확인합니다. 셋째, 서브도메인의 속임수에 현혹되지 않고 최상위 도메인 직전의 실제 호스트 주소를 판별합니다. 넷째, 퓨니코드 변환 징후를 감시하고 2단계 인증(2FA)을 필수 적용하여 계정 탈취를 원천 방어합니다. 이러한 능동적인 도메인 검증 습관이야말로 날로 교묘해지는 사이버 공격 환경에서 자신을 지켜내는 가장 확실하고 견고한 디지털 방패입니다.</p>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 웹 플랫폼 보안 가이드. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
